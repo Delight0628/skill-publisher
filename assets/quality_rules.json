@@ -1,0 +1,43 @@
+{
+  "sensitive_patterns": [
+    {
+      "pattern": "(?i)(api[_-]?key|apikey)\\s*[:=]\\s*['\"][^'\\"]{10,}['\\"]",
+      "description": "API Key 硬编码",
+      "severity": "error"
+    },
+    {
+      "pattern": "(?i)(secret[_-]?key|secretkey)\\s*[:=]\\s*['\"][^'\\"]{10,}['\\"]",
+      "description": "Secret Key 硬编码",
+      "severity": "error"
+    },
+    {
+      "pattern": "(?i)(password|passwd|pwd)\\s*[:=]\\s*['\"][^'\\"]{6,}['\\"]",
+      "description": "密码硬编码",
+      "severity": "error"
+    },
+    {
+      "pattern": "AKIA[0-9A-Z]{16}",
+      "description": "AWS Access Key ID",
+      "severity": "error"
+    },
+    {
+      "pattern": "ghp_[a-zA-Z0-9]{36}",
+      "description": "GitHub Personal Access Token",
+      "severity": "error"
+    },
+    {
+      "pattern": "-----BEGIN (RSA |EC |DSA )?PRIVATE KEY-----",
+      "description": "私钥文件内容",
+      "severity": "error"
+    }
+  ],
+  "syntax_checkers": {
+    ".py": "python",
+    ".sh": "bash",
+    ".js": "node"
+  },
+  "file_structure": {
+    "required_files": ["SKILL.md", ".gitignore"],
+    "recommended_files": ["README.md", "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md"]
+  }
+}
