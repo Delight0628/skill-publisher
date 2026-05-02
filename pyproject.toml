@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "skill-publisher"
+version = "1.0.0"
+description = "将 Roo Agent Skills 全局技能进行标准化项目化处理，并通过 GitHub MCP 工具自动推送到 GitHub 仓库实现开源发布。"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Roo Agent Skills"}
+]
+keywords = ["roo", "agent", "skill", "github", "publish"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/Delight0628/skill-publisher"
+Repository = "https://github.com/Delight0628/skill-publisher"
+Issues = "https://github.com/Delight0628/skill-publisher/issues"
